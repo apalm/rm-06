@@ -1,0 +1,338 @@
+{
+  "version": 1,
+  "beat_units_per_measure": 4,
+  "beat_unit": 4,
+  "tempo": 94,
+  "swing": 0.55,
+  "tracks": [
+    {
+      "id": "0",
+      "quantize": 16,
+      "volume": 1,
+      "pan": 0,
+      "pitch": 0.5,
+      "solo": false,
+      "mute": false,
+      "name": "Kick",
+      "sample_id": "0"
+    },
+    {
+      "id": "1",
+      "quantize": 16,
+      "volume": 1,
+      "pan": 0,
+      "pitch": 0.5,
+      "solo": false,
+      "mute": false,
+      "name": "Snare",
+      "sample_id": "1"
+    },
+    {
+      "id": "2",
+      "quantize": 16,
+      "volume": 0.38,
+      "pan": 0,
+      "pitch": 0.5,
+      "solo": false,
+      "mute": true,
+      "name": "Clap",
+      "sample_id": "2"
+    },
+    {
+      "id": "3",
+      "quantize": 16,
+      "volume": 0.5,
+      "pan": -0.41,
+      "pitch": 0.5,
+      "solo": false,
+      "mute": false,
+      "name": "HHC",
+      "sample_id": "3"
+    },
+    {
+      "id": "4",
+      "quantize": 16,
+      "volume": 0.5,
+      "pan": -0.4,
+      "pitch": 0.5,
+      "solo": false,
+      "mute": false,
+      "name": "HHO",
+      "sample_id": "4"
+    },
+    {
+      "id": "5",
+      "quantize": 16,
+      "volume": 1,
+      "pan": 0,
+      "pitch": 0.5,
+      "solo": false,
+      "mute": true,
+      "name": "Tom L",
+      "sample_id": "20"
+    },
+    {
+      "id": "7305b58f-f1d3-490d-afae-ae0d0935c53e",
+      "name": "707_CRS",
+      "sample_id": "13",
+      "quantize": 16,
+      "volume": 0.34,
+      "pan": 0,
+      "pitch": 0.5,
+      "solo": false,
+      "mute": false
+    }
+  ],
+  "notes": [
+    {
+      "start": 0,
+      "velocity": 127,
+      "track_id": "0"
+    },
+    {
+      "start": 480,
+      "velocity": 127,
+      "track_id": "1"
+    },
+    {
+      "start": 1440,
+      "velocity": 127,
+      "track_id": "1"
+    },
+    {
+      "start": 1440,
+      "velocity": 80,
+      "track_id": "3"
+    },
+    {
+      "start": 1680,
+      "velocity": 80,
+      "track_id": "4"
+    },
+    {
+      "start": 1440,
+      "velocity": 127,
+      "track_id": "5"
+    },
+    {
+      "track_id": "3",
+      "start": 360,
+      "velocity": 127
+    },
+    {
+      "track_id": "3",
+      "start": 1080,
+      "velocity": 127
+    },
+    {
+      "track_id": "3",
+      "start": 1560,
+      "velocity": 127
+    },
+    {
+      "track_id": "3",
+      "start": 1800,
+      "velocity": 127
+    },
+    {
+      "track_id": "3",
+      "start": 600,
+      "velocity": 127
+    },
+    {
+      "track_id": "3",
+      "start": 840,
+      "velocity": 127
+    },
+    {
+      "track_id": "3",
+      "start": 1320,
+      "velocity": 127
+    },
+    {
+      "track_id": "3",
+      "start": 120,
+      "velocity": 127
+    },
+    {
+      "track_id": "4",
+      "start": 240,
+      "velocity": 127
+    },
+    {
+      "track_id": "4",
+      "start": 720,
+      "velocity": 127
+    },
+    {
+      "track_id": "4",
+      "start": 1200,
+      "velocity": 127
+    },
+    {
+      "track_id": "0",
+      "start": 1440,
+      "velocity": 127
+    },
+    {
+      "track_id": "0",
+      "start": 840,
+      "velocity": 127
+    },
+    {
+      "track_id": "1",
+      "start": 1080,
+      "velocity": 127
+    },
+    {
+      "track_id": "1",
+      "start": 600,
+      "velocity": 127
+    },
+    {
+      "track_id": "0",
+      "start": 1200,
+      "velocity": 127
+    },
+    {
+      "track_id": "0",
+      "start": 1800,
+      "velocity": 127
+    },
+    {
+      "track_id": "0",
+      "start": 1560,
+      "velocity": 127
+    },
+    {
+      "start": 2400,
+      "velocity": 127,
+      "track_id": "1"
+    },
+    {
+      "start": 3360,
+      "velocity": 127,
+      "track_id": "1"
+    },
+    {
+      "start": 3360,
+      "velocity": 80,
+      "track_id": "3"
+    },
+    {
+      "start": 3600,
+      "velocity": 80,
+      "track_id": "4"
+    },
+    {
+      "start": 3360,
+      "velocity": 127,
+      "track_id": "5"
+    },
+    {
+      "track_id": "3",
+      "start": 2280,
+      "velocity": 127
+    },
+    {
+      "track_id": "3",
+      "start": 3000,
+      "velocity": 127
+    },
+    {
+      "track_id": "3",
+      "start": 3480,
+      "velocity": 127
+    },
+    {
+      "track_id": "3",
+      "start": 3720,
+      "velocity": 127
+    },
+    {
+      "track_id": "3",
+      "start": 2520,
+      "velocity": 127
+    },
+    {
+      "track_id": "3",
+      "start": 2760,
+      "velocity": 127
+    },
+    {
+      "track_id": "3",
+      "start": 3240,
+      "velocity": 127
+    },
+    {
+      "track_id": "3",
+      "start": 2040,
+      "velocity": 127
+    },
+    {
+      "track_id": "4",
+      "start": 2160,
+      "velocity": 127
+    },
+    {
+      "track_id": "4",
+      "start": 2640,
+      "velocity": 127
+    },
+    {
+      "track_id": "4",
+      "start": 3120,
+      "velocity": 127
+    },
+    {
+      "track_id": "0",
+      "start": 2760,
+      "velocity": 127
+    },
+    {
+      "track_id": "1",
+      "start": 3000,
+      "velocity": 127
+    },
+    {
+      "track_id": "0",
+      "start": 3120,
+      "velocity": 127
+    },
+    {
+      "track_id": "0",
+      "start": 3480,
+      "velocity": 127
+    },
+    {
+      "track_id": "0",
+      "start": 2160,
+      "velocity": 127
+    },
+    {
+      "track_id": "0",
+      "start": 2280,
+      "velocity": 127
+    },
+    {
+      "track_id": "2",
+      "start": 3600,
+      "velocity": 127
+    },
+    {
+      "track_id": "7305b58f-f1d3-490d-afae-ae0d0935c53e",
+      "start": 0,
+      "velocity": 127
+    },
+    {
+      "track_id": "1",
+      "start": 3600,
+      "velocity": 127
+    },
+    {
+      "track_id": "1",
+      "start": 3720,
+      "velocity": 127
+    }
+  ]
+}

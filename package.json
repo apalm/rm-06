@@ -1,0 +1,40 @@
+{
+  "name": "rm-06",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+    "@types/jest": "24.0.11",
+    "@types/node": "11.11.6",
+    "@types/react": "16.8.8",
+    "@types/react-dom": "16.8.3",
+    "classnames": "^2.2.6",
+    "emotion": "^10.0.9",
+    "jsmidgen": "^0.1.5",
+    "lodash": "^4.17.11",
+    "precision-inputs": "^0.2.5",
+    "react": "^16.8.5",
+    "react-aria-menubutton": "^6.1.0",
+    "react-dom": "^16.8.5",
+    "react-scripts": "2.1.8",
+    "typescript": "3.3.4000",
+    "uuid": "^3.3.2",
+    "xstate": "4.3.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "now-build": "npm run build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

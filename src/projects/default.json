@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "beat_units_per_measure": 4,
+  "beat_unit": 4,
+  "tempo": 94,
+  "swing": 0.4,
+  "tracks": [
+    {
+      "id": "0",
+      "quantize": 16,
+      "volume": 1,
+      "pan": 0,
+      "pitch": 0.5,
+      "solo": false,
+      "mute": false,
+      "name": "Kick",
+      "sample_id": "0"
+    },
+    {
+      "id": "1",
+      "quantize": 16,
+      "volume": 1,
+      "pan": 0,
+      "pitch": 0.5,
+      "solo": false,
+      "mute": false,
+      "name": "Snare",
+      "sample_id": "1"
+    },
+    {
+      "id": "2",
+      "quantize": 16,
+      "volume": 1,
+      "pan": 0,
+      "pitch": 0.5,
+      "solo": false,
+      "mute": false,
+      "name": "Clap",
+      "sample_id": "2"
+    },
+    {
+      "id": "3",
+      "quantize": 16,
+      "volume": 0.5,
+      "pan": -0.4,
+      "pitch": 0.5,
+      "solo": false,
+      "mute": false,
+      "name": "HHC",
+      "sample_id": "3"
+    },
+    {
+      "id": "4",
+      "quantize": 16,
+      "volume": 0.5,
+      "pan": -0.4,
+      "pitch": 0.5,
+      "solo": false,
+      "mute": false,
+      "name": "HHO",
+      "sample_id": "4"
+    },
+    {
+      "id": "5",
+      "quantize": 16,
+      "volume": 1,
+      "pan": 0,
+      "pitch": 0.5,
+      "solo": false,
+      "mute": false,
+      "name": "Tom L",
+      "sample_id": "20"
+    }
+  ],
+  "notes": [
+    { "start": 0, "velocity": 127, "track_id": "0" },
+    { "start": 840, "velocity": 127, "track_id": "0" },
+    { "start": 960, "velocity": 127, "track_id": "0" },
+    { "start": 480, "velocity": 127, "track_id": "1" },
+    { "start": 1440, "velocity": 127, "track_id": "1" },
+    { "start": 0, "velocity": 80, "track_id": "3" },
+    { "start": 240, "velocity": 80, "track_id": "3" },
+    { "start": 480, "velocity": 80, "track_id": "3" },
+    { "start": 720, "velocity": 80, "track_id": "3" },
+    { "start": 960, "velocity": 80, "track_id": "3" },
+    { "start": 1200, "velocity": 80, "track_id": "3" },
+    { "start": 1440, "velocity": 80, "track_id": "3" },
+    { "start": 1680, "velocity": 80, "track_id": "4" },
+    { "start": 1440, "velocity": 127, "track_id": "5" }
+  ]
+}

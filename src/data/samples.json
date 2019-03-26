@@ -1,0 +1,106 @@
+[
+  {
+    "kind": "KICK",
+    "path": "samples/707_BD0.wav"
+  },
+  {
+    "kind": "SNARE",
+    "path": "samples/707_SD0.wav"
+  },
+  {
+    "kind": "CLAP",
+    "path": "samples/clap.wav"
+  },
+  {
+    "kind": "HH_CLOSED",
+    "path": "samples/707_HHC.wav"
+  },
+  {
+    "kind": "HH_OPEN",
+    "path": "samples/707_HHO.wav"
+  },
+  {
+    "kind": "KICK",
+    "path": "samples/kick1.wav"
+  },
+  {
+    "kind": "KICK",
+    "path": "samples/kick2.wav"
+  },
+  {
+    "kind": "SNARE",
+    "path": "samples/707_SD1.wav"
+  },
+  {
+    "kind": "SNARE",
+    "path": "samples/sd1.wav"
+  },
+  {
+    "kind": "SNARE",
+    "path": "samples/sd2.wav"
+  },
+  {
+    "kind": "HH_CLOSED",
+    "path": "samples/chh.wav"
+  },
+  {
+    "kind": "HH_OPEN",
+    "path": "samples/ohh.wav"
+  },
+  {
+    "kind": "RIDE_CYMBAL",
+    "path": "samples/ride.wav"
+  },
+  {
+    "kind": "CRASH_CYMBAL",
+    "path": "samples/707_CRS.wav"
+  },
+  {
+    "kind": "CRASH_CYMBAL",
+    "path": "samples/crash.wav"
+  },
+  {
+    "kind": "TOM_H",
+    "path": "samples/707_HT.wav"
+  },
+  {
+    "kind": "TOM_H",
+    "path": "samples/hitom.wav"
+  },
+  {
+    "kind": "TOM_M",
+    "path": "samples/707_MT.wav"
+  },
+  {
+    "kind": "TOM_M",
+    "path": "samples/midtom.wav"
+  },
+  {
+    "kind": "TOM_L",
+    "path": "samples/707_LT.wav"
+  },
+  {
+    "kind": "TOM_L",
+    "path": "samples/lotom.wav"
+  },
+  {
+    "kind": "COWBELL",
+    "path": "samples/cowb.wav"
+  },
+  {
+    "kind": "TAMBOURINE",
+    "path": "samples/707_TAM.wav"
+  },
+  {
+    "kind": "TAMBOURINE",
+    "path": "samples/tamb.wav"
+  },
+  {
+    "kind": "CABASA",
+    "path": "samples/cabasa.wav"
+  },
+  {
+    "kind": "CLAP",
+    "path": "samples/707_HCP.wav"
+  }
+]
