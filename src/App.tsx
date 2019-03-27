@@ -1,9 +1,9 @@
 import * as React from "react";
+import { useMachine } from "@xstate/react";
 import * as cx from "classnames";
 import { css } from "emotion/macro";
 import groupBy from "lodash/fp/groupBy";
 import uuidv4 from "uuid/v4";
-import { useMachine } from "./useMachine";
 import {
   appMachine,
   get_num_measures,
@@ -18,8 +18,10 @@ import { MegaMenu, Wrapper, Menu, MenuItem, Button } from "./MegaMenu";
 import Knob from "./Knob";
 import styles from "./App.module.css";
 
+const __DEV__ = process.env.NODE_ENV !== "production";
+
 export default function App() {
-  const [currentState, send] = useMachine(appMachine);
+  const [currentState, send] = useMachine(appMachine, { devTools: __DEV__ });
   const tempo_input = React.useRef(null);
   const {
     ppqn,
