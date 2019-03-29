@@ -224,6 +224,32 @@ export const appMachine = Machine<AppCtx>(
           "set_timer"
         ]
       },
+      DUPLICATE_TRACK: {
+        actions: [
+          assign({
+            project: (ctx, { value: { track_id, new_track_id } }) => {
+              const tracks = ctx.project.tracks.slice();
+              const track_index = tracks.findIndex(x => x.id === track_id);
+              if (track_index !== -1) {
+                const track = { ...tracks[track_index], id: new_track_id };
+                tracks.splice(track_index + 1, 0, track);
+              }
+              let notes = ctx.project.notes.slice();
+              notes = notes.concat(
+                notes
+                  .filter(x => x.track_id === track_id)
+                  .map(x => ({ ...x, track_id: new_track_id }))
+              );
+
+              return { ...ctx.project, tracks, notes };
+            },
+            selected_track_id: (ctx, { value: { new_track_id } }) => {
+              return new_track_id;
+            }
+          }),
+          "set_timer"
+        ]
+      },
       CLEAR_TRACK_NOTES: {
         actions: [
           assign({

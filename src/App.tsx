@@ -279,17 +279,30 @@ export default function App() {
                 </select>
                 <button
                   onClick={() => {
-                    send({ type: "CLEAR_TRACK_NOTES", value: track.id });
+                    send({
+                      type: "DUPLICATE_TRACK",
+                      value: { track_id: track.id, new_track_id: uuidv4() }
+                    });
                   }}
+                  className={styles.button}
                 >
-                  clr
+                  dup
                 </button>
                 <button
                   onClick={() => {
                     send({ type: "DELETE_TRACK", value: track.id });
                   }}
+                  className={styles.button}
                 >
                   del
+                </button>
+                <button
+                  onClick={() => {
+                    send({ type: "CLEAR_TRACK_NOTES", value: track.id });
+                  }}
+                  className={styles.button}
+                >
+                  clr
                 </button>
               </label>
             ))}

@@ -103,11 +103,11 @@
   --sp-F: 768px;
 
   --pads_width: 520px;
-  --pad_height: 48px;
+  --pad_height: 46px;
   --pad_margin: 4px;
   --pad_margin_vertical: 0px;
   --pad_width: var(--sp-5);
-  --sequencer_tcps_width: 260px;
+  --sequencer_tcps_width: 270px;
   --sequencer_tcp_margin_vertical: 8px;
   --step_indicators_height: 30px;
   --mcp_width: 94px;
@@ -362,15 +362,12 @@ button {
 }
 
 .sequencer_tcp button {
-  cursor: pointer;
-  background-color: #3a4147;
-  font-weight: 600;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  padding: var(--sp-0) var(--sp-3);
+  padding: var(--sp-0) var(--sp-2);
   margin-right: var(--sp-1);
-  border: 1px solid #000;
+}
+
+.sequencer_tcp button:last-of-type {
+  margin-right: 0;
 }
 
 .sequencer_tcp_name {
