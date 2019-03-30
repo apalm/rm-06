@@ -659,6 +659,15 @@ function Sampler(props) {
         </button>
       </div>
       <section className={styles.sampler_edits_section}>
+        <button
+          onClick={() => {
+            send({
+              type: "PREVIEW_SAMPLE",
+              value: { sample_id, track_id: track.id }
+            });
+          }}
+          className={styles.sample_preview_pad}
+        />
         <label>
           <Knob
             value={track.pitch}
@@ -674,15 +683,6 @@ function Sampler(props) {
           />
           <span>Pitch</span>
         </label>
-        <button
-          onClick={() => {
-            send({
-              type: "PREVIEW_SAMPLE",
-              value: { sample_id, track_id: track.id }
-            });
-          }}
-          className={styles.sample_preview_pad}
-        />
       </section>
     </div>
   );
