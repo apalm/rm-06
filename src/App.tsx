@@ -66,6 +66,8 @@ export default function App() {
         <span>
           <span className={styles.tempo_units}>bpm</span>
           <input
+            // Workaround so we don't get stale value on e.g project import.
+            key={Math.random()}
             type="number"
             min={min_tempo}
             max={max_tempo}
