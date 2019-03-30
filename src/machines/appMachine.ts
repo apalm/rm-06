@@ -669,7 +669,7 @@ function schedule(
   const schedule_ahead_time = 0.1;
 
   while (next_note_time < audio_context.currentTime + schedule_ahead_time) {
-    const are_some_tracks_solo = tracks.filter(x => x.solo).length > 0;
+    const are_some_tracks_solo = tracks.some(x => x.solo);
 
     for (let note of notes) {
       // parseInt because we may end up with fractions, e.g. on triplets.
