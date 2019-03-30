@@ -1,0 +1,356 @@
+{
+  "version": 1,
+  "beat_units_per_measure": 4,
+  "beat_unit": 4,
+  "tempo": 94.2,
+  "swing": 0.59,
+  "tracks": [
+    {
+      "id": "0",
+      "quantize": 16,
+      "volume": 1,
+      "pan": 0,
+      "pitch": 0.5,
+      "solo": false,
+      "mute": false,
+      "name": "Kick",
+      "sample_id": "26"
+    },
+    {
+      "id": "1",
+      "quantize": 16,
+      "volume": 1,
+      "pan": 0,
+      "pitch": 0.5,
+      "solo": false,
+      "mute": false,
+      "name": "Snare",
+      "sample_id": "1"
+    },
+    {
+      "id": "3",
+      "quantize": 16,
+      "volume": 0.25,
+      "pan": -0.4,
+      "pitch": 0.5,
+      "solo": false,
+      "mute": false,
+      "name": "HHC",
+      "sample_id": "3"
+    },
+    {
+      "id": "4",
+      "quantize": 16,
+      "volume": 0.24,
+      "pan": -0.4,
+      "pitch": 0.5,
+      "solo": false,
+      "mute": false,
+      "name": "HHO",
+      "sample_id": "4"
+    },
+    {
+      "id": "70886f03-60e5-4102-96a0-6c4638880ec6",
+      "name": "CL",
+      "sample_id": "31",
+      "quantize": 16,
+      "volume": 0.63,
+      "pan": -0.21,
+      "pitch": 0.45,
+      "solo": false,
+      "mute": false
+    }
+  ],
+  "notes": [
+    {
+      "track_id": "0",
+      "start": 0,
+      "velocity": 127
+    },
+    {
+      "track_id": "1",
+      "start": 480,
+      "velocity": 127
+    },
+    {
+      "track_id": "1",
+      "start": 1440,
+      "velocity": 127
+    },
+    {
+      "track_id": "0",
+      "start": 960,
+      "velocity": 127
+    },
+    {
+      "track_id": "3",
+      "start": 0,
+      "velocity": 127
+    },
+    {
+      "track_id": "3",
+      "start": 240,
+      "velocity": 127
+    },
+    {
+      "track_id": "3",
+      "start": 480,
+      "velocity": 127
+    },
+    {
+      "track_id": "3",
+      "start": 720,
+      "velocity": 127
+    },
+    {
+      "track_id": "3",
+      "start": 960,
+      "velocity": 115
+    },
+    {
+      "track_id": "3",
+      "start": 1200,
+      "velocity": 101
+    },
+    {
+      "track_id": "3",
+      "start": 1440,
+      "velocity": 97
+    },
+    {
+      "track_id": "3",
+      "start": 1680,
+      "velocity": 110
+    },
+    {
+      "track_id": "0",
+      "start": 1920,
+      "velocity": 127
+    },
+    {
+      "track_id": "1",
+      "start": 2400,
+      "velocity": 127
+    },
+    {
+      "track_id": "1",
+      "start": 3360,
+      "velocity": 127
+    },
+    {
+      "track_id": "0",
+      "start": 2880,
+      "velocity": 127
+    },
+    {
+      "track_id": "3",
+      "start": 1920,
+      "velocity": 127
+    },
+    {
+      "track_id": "3",
+      "start": 2160,
+      "velocity": 127
+    },
+    {
+      "track_id": "3",
+      "start": 2400,
+      "velocity": 127
+    },
+    {
+      "track_id": "3",
+      "start": 2640,
+      "velocity": 127
+    },
+    {
+      "track_id": "3",
+      "start": 2880,
+      "velocity": 127
+    },
+    {
+      "track_id": "3",
+      "start": 3120,
+      "velocity": 127
+    },
+    {
+      "track_id": "3",
+      "start": 3360,
+      "velocity": 127
+    },
+    {
+      "track_id": "3",
+      "start": 3600,
+      "velocity": 127
+    },
+    {
+      "track_id": "0",
+      "start": 3120,
+      "velocity": 127
+    },
+    {
+      "track_id": "70886f03-60e5-4102-96a0-6c4638880ec6",
+      "start": 2160,
+      "velocity": 127
+    },
+    {
+      "track_id": "70886f03-60e5-4102-96a0-6c4638880ec6",
+      "start": 2520,
+      "velocity": 127
+    },
+    {
+      "track_id": "70886f03-60e5-4102-96a0-6c4638880ec6",
+      "start": 240,
+      "velocity": 127
+    },
+    {
+      "track_id": "70886f03-60e5-4102-96a0-6c4638880ec6",
+      "start": 600,
+      "velocity": 127
+    },
+    {
+      "track_id": "0",
+      "start": 3840,
+      "velocity": 127
+    },
+    {
+      "track_id": "1",
+      "start": 4320,
+      "velocity": 127
+    },
+    {
+      "track_id": "1",
+      "start": 5280,
+      "velocity": 127
+    },
+    {
+      "track_id": "0",
+      "start": 4800,
+      "velocity": 127
+    },
+    {
+      "track_id": "3",
+      "start": 3840,
+      "velocity": 127
+    },
+    {
+      "track_id": "3",
+      "start": 4080,
+      "velocity": 127
+    },
+    {
+      "track_id": "3",
+      "start": 4320,
+      "velocity": 127
+    },
+    {
+      "track_id": "3",
+      "start": 4800,
+      "velocity": 127
+    },
+    {
+      "track_id": "3",
+      "start": 5040,
+      "velocity": 127
+    },
+    {
+      "track_id": "3",
+      "start": 5280,
+      "velocity": 127
+    },
+    {
+      "track_id": "3",
+      "start": 5520,
+      "velocity": 127
+    },
+    {
+      "track_id": "0",
+      "start": 5760,
+      "velocity": 127
+    },
+    {
+      "track_id": "1",
+      "start": 6240,
+      "velocity": 127
+    },
+    {
+      "track_id": "1",
+      "start": 7200,
+      "velocity": 127
+    },
+    {
+      "track_id": "0",
+      "start": 6720,
+      "velocity": 127
+    },
+    {
+      "track_id": "3",
+      "start": 5760,
+      "velocity": 127
+    },
+    {
+      "track_id": "3",
+      "start": 6000,
+      "velocity": 127
+    },
+    {
+      "track_id": "3",
+      "start": 6240,
+      "velocity": 127
+    },
+    {
+      "track_id": "3",
+      "start": 6480,
+      "velocity": 127
+    },
+    {
+      "track_id": "3",
+      "start": 6720,
+      "velocity": 127
+    },
+    {
+      "track_id": "3",
+      "start": 6960,
+      "velocity": 127
+    },
+    {
+      "track_id": "3",
+      "start": 7200,
+      "velocity": 127
+    },
+    {
+      "track_id": "3",
+      "start": 7440,
+      "velocity": 127
+    },
+    {
+      "track_id": "0",
+      "start": 6960,
+      "velocity": 127
+    },
+    {
+      "track_id": "70886f03-60e5-4102-96a0-6c4638880ec6",
+      "start": 6000,
+      "velocity": 127
+    },
+    {
+      "track_id": "70886f03-60e5-4102-96a0-6c4638880ec6",
+      "start": 6360,
+      "velocity": 127
+    },
+    {
+      "track_id": "70886f03-60e5-4102-96a0-6c4638880ec6",
+      "start": 4080,
+      "velocity": 127
+    },
+    {
+      "track_id": "70886f03-60e5-4102-96a0-6c4638880ec6",
+      "start": 4440,
+      "velocity": 127
+    },
+    {
+      "start": 4560,
+      "velocity": 67,
+      "track_id": "3"
+    }
+  ]
+}
