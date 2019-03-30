@@ -806,9 +806,7 @@ function get_swing_ticks(swing: number, tick: number, ppqn: number) {
   let swing_ticks = 0;
   if (swing) {
     if (tick % (ppqn / 2)) {
-      swing_ticks = Math.ceil(swing * 30);
-    } else {
-      swing_ticks = Math.ceil(swing * -30);
+      swing_ticks = Math.ceil(swing * 60);
     }
   }
   return swing_ticks;
