@@ -102,5 +102,81 @@
   {
     "kind": "CLAP",
     "path": "samples/707_HCP.wav"
+  },
+  {
+    "kind": "KICK",
+    "path": "samples/TR808WAV/BD/BD7575.WAV"
+  },
+  {
+    "kind": "KICK",
+    "path": "samples/TR808WAV/BD/BD2550.WAV"
+  },
+  {
+    "kind": "KICK",
+    "path": "samples/TR808WAV/BD/BD1075.WAV"
+  },
+  {
+    "kind": "COWBELL",
+    "path": "samples/TR808WAV/CB/CB.WAV"
+  },
+  {
+    "kind": "HH_CLOSED",
+    "path": "samples/TR808WAV/CH/CH.WAV"
+  },
+  {
+    "kind": "CLAVES",
+    "path": "samples/TR808WAV/CL/CL.WAV"
+  },
+  {
+    "kind": "CLAP",
+    "path": "samples/TR808WAV/CP/CP.WAV"
+  },
+  {
+    "kind": "CRASH_CYMBAL",
+    "path": "samples/TR808WAV/CY/CY7575.WAV"
+  },
+  {
+    "kind": "CRASH_CYMBAL",
+    "path": "samples/TR808WAV/CY/CY7500.WAV"
+  },
+  {
+    "kind": "TOM_H",
+    "path": "samples/TR808WAV/HT/HT75.WAV"
+  },
+  {
+    "kind": "TOM_M",
+    "path": "samples/TR808WAV/MT/MT75.WAV"
+  },
+  {
+    "kind": "TOM_L",
+    "path": "samples/TR808WAV/LT/LT10.WAV"
+  },
+  {
+    "kind": "MARACAS",
+    "path": "samples/TR808WAV/MA/MA.WAV"
+  },
+  {
+    "kind": "HH_OPEN",
+    "path": "samples/TR808WAV/OH/OH00.WAV"
+  },
+  {
+    "kind": "HH_OPEN",
+    "path": "samples/TR808WAV/OH/OH50.WAV"
+  },
+  {
+    "kind": "HH_OPEN",
+    "path": "samples/TR808WAV/OH/OH75.WAV"
+  },
+  {
+    "kind": "SNARE",
+    "path": "samples/TR808WAV/SD/SD7575.WAV"
+  },
+  {
+    "kind": "SNARE",
+    "path": "samples/TR808WAV/SD/SD2575.WAV"
+  },
+  {
+    "kind": "SNARE",
+    "path": "samples/TR808WAV/SD/SD0010.WAV"
   }
 ]
