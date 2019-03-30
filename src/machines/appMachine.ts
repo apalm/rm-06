@@ -1,4 +1,4 @@
-import { Track, Note, Sample } from "../types";
+import { Project, Track, Note, Sample } from "../types";
 import { Machine, assign } from "xstate";
 import groupBy from "lodash/fp/groupBy";
 import { basename } from "../helpers/basename";
@@ -103,9 +103,57 @@ Promise.all(
   context.samples = objectify<Sample>(xs);
 });
 
-type AppCtx = typeof context;
+type AppContext = typeof context;
 
-export const appMachine = Machine<AppCtx>(
+interface AppStateSchema {
+  states: {
+    stopped: {};
+    playing: {};
+  };
+}
+
+type AppEvent =
+  | { type: "PLAY" }
+  | { type: "STOP" }
+  | { type: "CHANGE_TEMPO"; value: number }
+  | { type: "PAD_PRESS"; value: { start: number; track_id: string } }
+  | {
+      type: "CHANGE_TRACK_QUANTIZE";
+      value: { quantize: number; quantize_prev: number; track_id: string };
+    }
+  | { type: "ADD_TRACK"; value: { sample: Sample; track_id: string } }
+  | { type: "DELETE_TRACK"; value: string }
+  | {
+      type: "DUPLICATE_TRACK";
+      value: { track_id: string; new_track_id: string };
+    }
+  | { type: "CLEAR_TRACK_NOTES"; value: string }
+  | { type: "SET_TRACK_SAMPLE"; value: { sample_id: string; track_id: string } }
+  | { type: "SET_TRACK_VOLUME"; value: { volume: number; track_id: string } }
+  | { type: "SET_TRACK_PAN"; value: { pan: number; track_id: string } }
+  | { type: "SET_TRACK_PITCH"; value: { pitch: number; track_id: string } }
+  | { type: "SET_TRACK_SOLO"; value: { solo: boolean; track_id: string } }
+  | { type: "SET_TRACK_MUTE"; value: { mute: boolean; track_id: string } }
+  | {
+      type: "SET_NOTE_VELOCITY";
+      value: { velocity: number; start: number; track_id: string };
+    }
+  | {
+      type: "SET_TIME_SIGNATURE";
+      value: { beat_units_per_measure: number; beat_unit: number };
+    }
+  | { type: "SET_SWING"; value: number }
+  | { type: "SET_PROJECT"; value: Project }
+  | { type: "DOUBLE_PATTERN" }
+  | { type: "CLEAR_PATTERN" }
+  | { type: "RANDOMIZE_KIT" }
+  | { type: "SET_SELECTED_TRACK_ID"; value: string }
+  | { type: "SET_EDIT_VELOCITY_MODE"; value: boolean }
+  | { type: "EXPORT_PROJECT" }
+  | { type: "EXPORT_MIDI" }
+  | { type: "PREVIEW_SAMPLE"; value: { sample_id: string; track_id: string } };
+
+export const appMachine = Machine<AppContext, AppStateSchema, AppEvent>(
   {
     id: "app",
     initial: "stopped",
@@ -528,6 +576,7 @@ export const appMachine = Machine<AppCtx>(
       },
       play_sample: (ctx, event) => {
         const {
+          // @ts-ignore
           value: { sample_id, track_id }
         } = event;
         const sample = ctx.samples[sample_id];

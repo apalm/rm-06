@@ -22,3 +22,13 @@ export type Sample = {
   path: string;
   sample: AudioBuffer | null;
 };
+
+export type Project = {
+  version: number;
+  beat_units_per_measure: number;
+  beat_unit: number;
+  tempo: number;
+  swing: number;
+  tracks: Array<Track>;
+  notes: Array<Note>;
+};
