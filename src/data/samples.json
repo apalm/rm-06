@@ -178,5 +178,9 @@
   {
     "kind": "SNARE",
     "path": "samples/TR808WAV/SD/SD0010.WAV"
+  },
+  {
+    "kind": "SNARE_SIDE_STICK",
+    "path": "samples/sst.wav"
   }
 ]

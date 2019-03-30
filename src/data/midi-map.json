@@ -1,5 +1,6 @@
 {
   "KICK": [36, 35],
+  "SNARE_SIDE_STICK": 37,
   "SNARE": [38, 40],
   "TOM_L": [43, 41],
   "TOM_M": [47, 45],
