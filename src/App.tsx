@@ -53,7 +53,9 @@ export default function App() {
     <div className={styles.app}>
       <header>
         <h1>
-          <a href="https://github.com/apalm/rm-06">RM-06</a>
+          <a href="https://github.com/apalm/rm-06" target="_blank">
+            RM-06
+          </a>
         </h1>
         <button
           onClick={() =>
