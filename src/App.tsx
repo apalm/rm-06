@@ -191,6 +191,15 @@ export default function App() {
         >
           pattern clr
         </button>
+        <button
+          type="button"
+          onClick={() => {
+            send("RANDOMIZE_KIT");
+          }}
+          className={styles.button}
+        >
+          kit rnd
+        </button>
         <label className={styles.button}>
           <input
             type="file"

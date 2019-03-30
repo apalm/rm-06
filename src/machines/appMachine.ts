@@ -1,5 +1,6 @@
 import { Track, Note, Sample } from "../types";
 import { Machine, assign } from "xstate";
+import groupBy from "lodash/fp/groupBy";
 import { basename } from "../helpers/basename";
 import { extname } from "../helpers/extname";
 import { get_midi_note_number_mapping } from "../helpers/get_midi_note_number_track_mapping";
@@ -450,6 +451,31 @@ export const appMachine = Machine<AppCtx>(
           "set_timer"
         ]
       },
+      RANDOMIZE_KIT: {
+        actions: [
+          assign({
+            project: (ctx, event) => {
+              const samples_by_kind = groupBy(x => x.kind, ctx.samples);
+              const tracks = ctx.project.tracks.map(x => {
+                const sample_old = ctx.samples[x.sample_id];
+                if (sample_old) {
+                  const kind = sample_old.kind;
+                  const kind_samples = samples_by_kind[kind];
+                  const sample_new =
+                    kind_samples[get_random_int(0, kind_samples.length - 1)];
+                  if (sample_new) {
+                    return { ...x, sample_id: sample_new.id };
+                  }
+                  return x;
+                }
+                return x;
+              });
+              return { ...ctx.project, tracks };
+            }
+          }),
+          "set_timer"
+        ]
+      },
       SET_SELECTED_TRACK_ID: {
         actions: assign({
           selected_track_id: (ctx, event) => event.value
@@ -803,6 +829,12 @@ function web_audio_touch_unlock(audio_context: AudioContext) {
       resolve(false);
     }
   });
+}
+
+function get_random_int(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 export const quantizes = [
