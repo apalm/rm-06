@@ -102,8 +102,8 @@
   --sp-E: 640px;
   --sp-F: 768px;
 
-  --pads_width: 520px;
-  --pad_height: 46px;
+  --pads_width: 480px;
+  --pad_height: 40px;
   --pad_margin: 4px;
   --pad_margin_vertical: 0px;
   --pad_width: var(--sp-5);
