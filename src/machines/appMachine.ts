@@ -139,7 +139,6 @@ export const appMachine = Machine<AppCtx>(
           assign({
             project: (ctx, { value: { start, track_id } }) => {
               const notes = ctx.project.notes.slice();
-              // TODO - account for time_shift
               const noteIndex = notes.findIndex(
                 x => x.track_id === track_id && x.start === start
               );
