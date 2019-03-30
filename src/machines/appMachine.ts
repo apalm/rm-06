@@ -855,5 +855,9 @@ export const time_signatures = [
   { beat_units_per_measure: 5, beat_unit: 4 },
   { beat_units_per_measure: 6, beat_unit: 4 },
   { beat_units_per_measure: 7, beat_unit: 4 },
-  { beat_units_per_measure: 8, beat_unit: 4 }
+  { beat_units_per_measure: 8, beat_unit: 4 },
+  { beat_units_per_measure: 9, beat_unit: 4 },
+  { beat_units_per_measure: 10, beat_unit: 4 },
+  { beat_units_per_measure: 11, beat_unit: 4 },
+  { beat_units_per_measure: 12, beat_unit: 4 }
 ];
