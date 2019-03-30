@@ -139,18 +139,18 @@ export const appMachine = Machine<AppCtx>(
           assign({
             project: (ctx, { value: { start, track_id } }) => {
               const notes = ctx.project.notes.slice();
-              const noteIndex = notes.findIndex(
+              const note_index = notes.findIndex(
                 x => x.track_id === track_id && x.start === start
               );
 
-              if (noteIndex === -1) {
+              if (note_index === -1) {
                 notes.push({
                   track_id,
                   start,
                   velocity: 127
                 });
               } else {
-                notes.splice(noteIndex, 1);
+                notes.splice(note_index, 1);
               }
 
               return { ...ctx.project, notes };
