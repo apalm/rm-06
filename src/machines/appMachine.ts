@@ -610,26 +610,39 @@ export const appMachine = Machine<AppContext, AppStateSchema, AppEvent>(
           ctx.project.tracks,
           ctx.samples
         );
-
-        const notes = ctx.project.notes.map(x => ({
-          ...x,
-          start: Math.max(
-            0,
-            x.start + get_swing_ticks(ctx.project.swing, x.start, ctx.ppqn)
-          )
-        }));
+        const track_id_to_midi_note_number = Object.entries(
+          midi_note_number_track_map
+        ).reduce(
+          (acc, [k, v]) => ({
+            ...acc,
+            // @ts-ignore
+            [v.id]: Number(k)
+          }),
+          {}
+        );
+        const notes = ctx.project.notes.map(x => {
+          const swing_ticks = get_swing_ticks(
+            ctx.project.swing,
+            x.start,
+            ctx.ppqn
+          );
+          const track = ctx.project.tracks.find(y => y.id === x.track_id);
+          const duration =
+            ctx.ppqn /
+              // @ts-ignore
+              (track.quantize / 4) -
+            swing_ticks;
+          return {
+            ...x,
+            start: Math.max(0, x.start + swing_ticks),
+            duration,
+            midi_note_number: track_id_to_midi_note_number[x.track_id]
+          };
+        });
 
         const href =
           "data:audio/midi;base64," +
-          btoa(
-            get_midi(
-              midi_note_number_track_map,
-              ctx.ppqn,
-              ctx.project.tempo,
-              notes,
-              ctx.project.tracks
-            ).toBytes()
-          );
+          btoa(get_midi(ctx.ppqn, ctx.project.tempo, notes).toBytes());
 
         const a = document.createElement("a");
         a.href = href;

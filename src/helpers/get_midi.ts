@@ -1,43 +1,21 @@
 import Midi from "jsmidgen";
 
-export function get_midi(
-  midi_note_number_track_map,
-  ppqn: number,
-  tempo: number,
-  notes,
-  tracks
-) {
+export function get_midi(ppqn: number, tempo: number, notes) {
   const channel = 10; // General MIDI percussion
 
   const midi_file = new Midi.File({ ticks: ppqn });
   const midi_track = midi_file.addTrack();
   midi_track.setTempo(tempo);
 
-  const track_id_to_midi_note_number = Object.entries(
-    midi_note_number_track_map
-  ).reduce(
-    (acc, [k, v]) => ({
-      ...acc,
-      // @ts-ignore
-      [v.id]: Number(k)
-    }),
-    {}
-  );
-
   const events = notes
     .sort((a, b) => a.start - b.start)
     .map(note => {
-      const track_id = note.track_id;
-      const track = tracks.find(x => x.id === track_id);
-
-      const duration = ppqn / (track.quantize / 4);
-
       return {
         channel,
-        midi_note_number: track_id_to_midi_note_number[track_id],
+        midi_note_number: note.midi_note_number,
         velocity: note.velocity,
         on: note.start,
-        off: note.start + duration
+        off: note.start + note.duration
       };
     })
     .reduce((acc, event) => {
