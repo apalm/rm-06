@@ -8,7 +8,7 @@ import { get_midi } from "../helpers/get_midi";
 import _timer_worker from "../helpers/timer_worker";
 import samples from "../data/samples.json";
 import midi_note_number_map from "../data/midi-map.json";
-import default_project from "../projects/default.json";
+import default_project from "../projects/juicy.json";
 
 let current_tick;
 let next_note_time = 0.0;
