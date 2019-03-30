@@ -66,15 +66,20 @@ export default function App() {
         <span>
           <span className={styles.tempo_units}>bpm</span>
           <input
+            type="number"
+            min={min_tempo}
+            max={max_tempo}
+            step={0.1}
             ref={tempo_input}
             className={styles.tempo}
             defaultValue={String(tempo)}
             onKeyPress={event => {
               if (event.key === "Enter") {
                 let value = Math.min(
-                  Math.max(min_tempo, parseInt(event.currentTarget.value)),
+                  Math.max(min_tempo, parseFloat(event.currentTarget.value)),
                   max_tempo
                 );
+                value = Math.round(value * 10) / 10;
                 if (Number.isNaN(value)) {
                   value = tempo_default;
                 }
