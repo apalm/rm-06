@@ -1,11 +1,11 @@
 [
   {
     "kind": "KICK",
-    "path": "samples/707_BD0.wav"
+    "path": "samples/_unknown/707_BD0.wav"
   },
   {
     "kind": "SNARE",
-    "path": "samples/707_SD0.wav"
+    "path": "samples/_unknown/707_SD0.wav"
   },
   {
     "kind": "CLAP",
@@ -13,11 +13,11 @@
   },
   {
     "kind": "HH_CLOSED",
-    "path": "samples/707_HHC.wav"
+    "path": "samples/_unknown/707_HHC.wav"
   },
   {
     "kind": "HH_OPEN",
-    "path": "samples/707_HHO.wav"
+    "path": "samples/_unknown/707_HHO.wav"
   },
   {
     "kind": "KICK",
@@ -29,7 +29,7 @@
   },
   {
     "kind": "SNARE",
-    "path": "samples/707_SD1.wav"
+    "path": "samples/_unknown/707_SD1.wav"
   },
   {
     "kind": "SNARE",
@@ -53,7 +53,7 @@
   },
   {
     "kind": "CRASH_CYMBAL",
-    "path": "samples/707_CRS.wav"
+    "path": "samples/_unknown/707_CRS.wav"
   },
   {
     "kind": "CRASH_CYMBAL",
@@ -61,7 +61,7 @@
   },
   {
     "kind": "TOM_H",
-    "path": "samples/707_HT.wav"
+    "path": "samples/_unknown/707_HT.wav"
   },
   {
     "kind": "TOM_H",
@@ -69,7 +69,7 @@
   },
   {
     "kind": "TOM_M",
-    "path": "samples/707_MT.wav"
+    "path": "samples/_unknown/707_MT.wav"
   },
   {
     "kind": "TOM_M",
@@ -77,7 +77,7 @@
   },
   {
     "kind": "TOM_L",
-    "path": "samples/707_LT.wav"
+    "path": "samples/_unknown/707_LT.wav"
   },
   {
     "kind": "TOM_L",
@@ -89,7 +89,7 @@
   },
   {
     "kind": "TAMBOURINE",
-    "path": "samples/707_TAM.wav"
+    "path": "samples/_unknown/707_TAM.wav"
   },
   {
     "kind": "TAMBOURINE",
@@ -101,7 +101,7 @@
   },
   {
     "kind": "CLAP",
-    "path": "samples/707_HCP.wav"
+    "path": "samples/_unknown/707_HCP.wav"
   },
   {
     "kind": "KICK",
