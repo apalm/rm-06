@@ -601,6 +601,7 @@ button {
 
 .sampler select {
   margin: 0 var(--sp-2);
+  width: 150px;
 }
 
 .sampler_edits_section {
