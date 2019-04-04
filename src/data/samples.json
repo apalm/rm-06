@@ -9,7 +9,7 @@
   },
   {
     "kind": "CLAP",
-    "path": "samples/clap.wav"
+    "path": "samples/[KB6]_Linn_LM-1/clap.wav"
   },
   {
     "kind": "HH_CLOSED",
@@ -21,11 +21,11 @@
   },
   {
     "kind": "KICK",
-    "path": "samples/kick1.wav"
+    "path": "samples/[KB6]_Linn_LM-1/kick1.wav"
   },
   {
     "kind": "KICK",
-    "path": "samples/kick2.wav"
+    "path": "samples/[KB6]_Linn_LM-1/kick2.wav"
   },
   {
     "kind": "SNARE",
@@ -33,23 +33,23 @@
   },
   {
     "kind": "SNARE",
-    "path": "samples/sd1.wav"
+    "path": "samples/[KB6]_Linn_LM-1/sd1.wav"
   },
   {
     "kind": "SNARE",
-    "path": "samples/sd2.wav"
+    "path": "samples/[KB6]_Linn_LM-1/sd2.wav"
   },
   {
     "kind": "HH_CLOSED",
-    "path": "samples/chh.wav"
+    "path": "samples/[KB6]_Linn_LM-1/chh.wav"
   },
   {
     "kind": "HH_OPEN",
-    "path": "samples/ohh.wav"
+    "path": "samples/[KB6]_Linn_LM-1/ohh.wav"
   },
   {
     "kind": "RIDE_CYMBAL",
-    "path": "samples/ride.wav"
+    "path": "samples/[KB6]_Linn_LM-1/ride.wav"
   },
   {
     "kind": "CRASH_CYMBAL",
@@ -57,7 +57,7 @@
   },
   {
     "kind": "CRASH_CYMBAL",
-    "path": "samples/crash.wav"
+    "path": "samples/[KB6]_Linn_LM-1/crash.wav"
   },
   {
     "kind": "TOM_H",
@@ -65,7 +65,7 @@
   },
   {
     "kind": "TOM_H",
-    "path": "samples/hitom.wav"
+    "path": "samples/[KB6]_Linn_LM-1/hitom.wav"
   },
   {
     "kind": "TOM_M",
@@ -73,7 +73,7 @@
   },
   {
     "kind": "TOM_M",
-    "path": "samples/midtom.wav"
+    "path": "samples/[KB6]_Linn_LM-1/midtom.wav"
   },
   {
     "kind": "TOM_L",
@@ -81,11 +81,11 @@
   },
   {
     "kind": "TOM_L",
-    "path": "samples/lotom.wav"
+    "path": "samples/[KB6]_Linn_LM-1/lotom.wav"
   },
   {
     "kind": "COWBELL",
-    "path": "samples/cowb.wav"
+    "path": "samples/[KB6]_Linn_LM-1/cowb.wav"
   },
   {
     "kind": "TAMBOURINE",
@@ -93,11 +93,11 @@
   },
   {
     "kind": "TAMBOURINE",
-    "path": "samples/tamb.wav"
+    "path": "samples/[KB6]_Linn_LM-1/tamb.wav"
   },
   {
     "kind": "CABASA",
-    "path": "samples/cabasa.wav"
+    "path": "samples/[KB6]_Linn_LM-1/cabasa.wav"
   },
   {
     "kind": "CLAP",
@@ -181,7 +181,7 @@
   },
   {
     "kind": "SNARE_SIDE_STICK",
-    "path": "samples/sst.wav"
+    "path": "samples/[KB6]_Linn_LM-1/sst.wav"
   },
   {
     "kind": "KICK",
