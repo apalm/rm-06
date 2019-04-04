@@ -182,5 +182,121 @@
   {
     "kind": "SNARE_SIDE_STICK",
     "path": "samples/sst.wav"
+  },
+  {
+    "kind": "KICK",
+    "path": "samples/[KB6]_Akai_MPC2000/KICK_F.wav"
+  },
+  {
+    "kind": "KICK",
+    "path": "samples/[KB6]_Akai_MPC2000/KICK_OF_1B.wav"
+  },
+  {
+    "kind": "SNARE",
+    "path": "samples/[KB6]_Akai_MPC2000/HIP_S_SN.wav"
+  },
+  {
+    "kind": "SPLASH_CYMBAL",
+    "path": "samples/[KB6]_Akai_MPC2000/NR_SPLASH.wav"
+  },
+  {
+    "kind": "HH_CLOSED",
+    "path": "samples/[KB6]_Akai_MPC2000/HH_THIN.wav"
+  },
+  {
+    "kind": "HH_CLOSED",
+    "path": "samples/[KB6]_Akai_MPC2000/HIP_HH_1.wav"
+  },
+  {
+    "kind": "HH_OPEN",
+    "path": "samples/[KB6]_Akai_MPC2000/HH_THIN__OP.wav"
+  },
+  {
+    "kind": "TOM_H",
+    "path": "samples/[KB6]_Akai_MPC2000/NR_TOM_H.wav"
+  },
+  {
+    "kind": "TOM_M",
+    "path": "samples/[KB6]_Akai_MPC2000/NR_TOM_M.wav"
+  },
+  {
+    "kind": "TOM_L",
+    "path": "samples/[KB6]_Akai_MPC2000/NR_TOM_L.wav"
+  },
+  {
+    "kind": "SNARE",
+    "path": "samples/Oberheim DMX samples by SynthMania/DMX through 1984 Soundcraft Series 1600 console/02b SNARE (80s).wav"
+  },
+  {
+    "kind": "KICK",
+    "path": "samples/Oberheim DMX samples by SynthMania/DMX through 1984 Soundcraft Series 1600 console/01b BASS (PUNCH).wav"
+  },
+  {
+    "kind": "HH_CLOSED",
+    "path": "samples/Oberheim DMX samples by SynthMania/DMX through 1984 Soundcraft Series 1600 console/03 CLOSED HI-HAT (MID-SCOOP).wav"
+  },
+  {
+    "kind": "RIDE_CYMBAL",
+    "path": "samples/Oberheim DMX samples by SynthMania/DMX through 1984 Soundcraft Series 1600 console/12 RIDE (AIR EQ).wav"
+  },
+  {
+    "kind": "CRASH_CYMBAL",
+    "path": "samples/Oberheim DMX samples by SynthMania/DMX through 1984 Soundcraft Series 1600 console/13 CRASH (HI & MID EQ).wav"
+  },
+  {
+    "kind": "TAMBOURINE",
+    "path": "samples/Oberheim DMX samples by SynthMania/DMX through 1984 Soundcraft Series 1600 console/14 TAMB (SWEETENING EQ).wav"
+  },
+  {
+    "kind": "CLAP",
+    "path": "samples/Oberheim DMX samples by SynthMania/DMX through 1984 Soundcraft Series 1600 console/17 CLAPS (HI MID BOOST & LO MID CUT).wav"
+  },
+  {
+    "kind": "KICK",
+    "path": "samples/Oberheim DMX samples by SynthMania/DMX through Eventide H3000/01b BASS (BRIGHT ROOM).wav"
+  },
+  {
+    "kind": "SNARE",
+    "path": "samples/Oberheim DMX samples by SynthMania/DMX through Eventide H3000/02a SNARE (8 SEC REV).wav"
+  },
+  {
+    "kind": "SNARE",
+    "path": "samples/Oberheim DMX samples by SynthMania/DMX through Eventide H3000/02c SNARE (BIG SNARE).wav"
+  },
+  {
+    "kind": "KICK",
+    "path": "samples/Roland TR-505 samples by Synthmania/Soundcraft 1600 pre + EQ/Bass Drum (Producer).wav"
+  },
+  {
+    "kind": "KICK",
+    "path": "samples/Roland TR-505 samples by Synthmania/Soundcraft 1600 pre + EQ/Bass Drum (Punchy).wav"
+  },
+  {
+    "kind": "KICK",
+    "path": "samples/Roland TR-505 samples by Synthmania/Soundcraft 1600 pre + EQ/Bass Drum (Wool).wav"
+  },
+  {
+    "kind": "SNARE",
+    "path": "samples/Roland TR-505 samples by Synthmania/Soundcraft 1600 pre + EQ/Snare Drum (Pillow).wav"
+  },
+  {
+    "kind": "HH_CLOSED",
+    "path": "samples/Roland TR-505 samples by Synthmania/Soundcraft 1600 pre + EQ/Closed Hi-Hat (Classy).wav"
+  },
+  {
+    "kind": "CRASH_CYMBAL",
+    "path": "samples/Roland TR-505 samples by Synthmania/Soundcraft 1600 pre + EQ/Crash Cymbal (Rock).wav"
+  },
+  {
+    "kind": "RIDE_CYMBAL",
+    "path": "samples/Roland TR-505 samples by Synthmania/Soundcraft 1600 pre + EQ/Ride Cymbal (Body).wav"
+  },
+  {
+    "kind": "CLAP",
+    "path": "samples/Roland TR-505 samples by Synthmania/Soundcraft 1600 pre + EQ/Hand Clap (Cut).wav"
+  },
+  {
+    "kind": "CONGA_L",
+    "path": "samples/Roland TR-505 samples by Synthmania/Soundcraft 1600 pre + EQ/Low Conga (Real).wav"
   }
 ]
