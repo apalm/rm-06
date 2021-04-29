@@ -217,6 +217,7 @@ body {
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   font-size: var(--fs-2);
+  overscroll-behavior: none;
 }
 
 select {
