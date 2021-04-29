@@ -2,46 +2,40 @@ import * as React from "react";
 import { FLStandardKnob } from "precision-inputs/umd/precision-inputs.fl-controls";
 import "precision-inputs/css/precision-inputs.fl-controls.css";
 
-export default class Knob extends React.Component {
-  constructor(props) {
-    super(props);
-    this.container = React.createRef();
-    this.knob = null;
-  }
-
-  componentDidMount() {
-    this.knob = new FLStandardKnob(this.container.current, {
+export default function Knob(props) {
+  const { size = 38 } = props;
+  const container = React.useRef(null);
+  const knob = React.useRef(null);
+  React.useEffect(() => {
+    knob.current = new FLStandardKnob(container.current, {
       color: "#daf1a9",
       dragResistance: 50,
       wheelResistance: 10,
-      min: this.props.min,
-      max: this.props.max,
-      step: this.props.step,
-      initial: this.props.value
+      min: props.min,
+      max: props.max,
+      step: props.step,
+      initial: props.value,
     });
-    this.knob.value = this.props.value;
-    this.knob.addEventListener("change", event => {
-      this.props.onChange(event.target.value);
-    });
-  }
-
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.value !== this.props.value) {
-      this.knob.value = nextProps.value;
+    knob.current.value = props.value;
+    function handleChange(event) {
+      props.onChange(event.target.value);
     }
-    if (nextProps.min !== this.props.min) {
-      this.knob.min = nextProps.min;
-    }
-    if (nextProps.max !== this.props.max) {
-      this.knob.max = nextProps.max;
-    }
-    if (nextProps.step !== this.props.step) {
-      this.knob.step = nextProps.step;
-    }
-  }
-
-  render() {
-    const size = this.props.size || 38;
-    return <div ref={this.container} style={{ width: size, height: size }} />;
-  }
+    knob.current.addEventListener("change", handleChange);
+    return () => {
+      knob.current.removeEventListener("change", handleChange);
+    };
+  }, []);
+  React.useEffect(() => {
+    knob.current.value = props.value;
+  }, [props.value]);
+  React.useEffect(() => {
+    knob.current.min = props.min;
+  }, [props.min]);
+  React.useEffect(() => {
+    knob.current.max = props.max;
+  }, [props.max]);
+  React.useEffect(() => {
+    knob.current.step = props.step;
+  }, [props.step]);
+  return <div ref={container} style={{ width: size, height: size }} />;
 }

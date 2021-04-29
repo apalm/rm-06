@@ -1,14 +1,14 @@
 import * as React from "react";
 import { useMachine } from "@xstate/react";
-import * as cx from "classnames";
+import cx from "classnames";
 import { css } from "emotion/macro";
 import groupBy from "lodash/fp/groupBy";
-import uuidv4 from "uuid/v4";
+import { v4 as uuidv4 } from "uuid";
 import {
   appMachine,
   get_num_measures,
   quantizes,
-  time_signatures
+  time_signatures,
 } from "./machines/appMachine";
 import { range } from "./helpers/range";
 import { basename } from "./helpers/basename";
@@ -39,7 +39,7 @@ export default function App() {
     samples,
     selected_track_id,
     edit_velocity_mode,
-    project: { tempo, swing, beat_units_per_measure, beat_unit, tracks, notes }
+    project: { tempo, swing, beat_units_per_measure, beat_unit, tracks, notes },
   } = currentState.context;
   const num_measures = get_num_measures(
     notes,
@@ -47,13 +47,17 @@ export default function App() {
     beat_units_per_measure,
     beat_unit
   );
-  const samples_by_kind = groupBy(x => x.kind, samples);
+  const samples_by_kind = groupBy((x) => x.kind, samples);
 
   return (
     <div className={styles.app}>
       <header>
         <h1>
-          <a href="https://github.com/apalm/rm-06" target="_blank">
+          <a
+            href="https://github.com/apalm/rm-06"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             RM-06
           </a>
         </h1>
@@ -77,7 +81,7 @@ export default function App() {
             ref={tempo_input}
             className={styles.tempo}
             defaultValue={String(tempo)}
-            onKeyPress={event => {
+            onKeyPress={(event) => {
               if (event.key === "Enter") {
                 let value = Math.min(
                   Math.max(min_tempo, parseFloat(event.currentTarget.value)),
@@ -89,7 +93,7 @@ export default function App() {
                 }
                 send({
                   type: "CHANGE_TEMPO",
-                  value
+                  value,
                 });
                 if (tempo_input && tempo_input.current) {
                   // @ts-ignore
@@ -107,16 +111,16 @@ export default function App() {
           min={min_swing}
           max={max_swing}
           step={0.01}
-          onChange={value => {
+          onChange={(value) => {
             send({
               type: "SET_SWING",
-              value: parseFloat(value)
+              value: parseFloat(value),
             });
           }}
         />
         <select
           value={JSON.stringify({ beat_units_per_measure, beat_unit })}
-          onChange={event => {
+          onChange={(event) => {
             const v = JSON.parse(event.target.value);
             const beat_units_per_measure = parseInt(v.beat_units_per_measure);
             const beat_unit = parseInt(v.beat_unit);
@@ -124,8 +128,8 @@ export default function App() {
               type: "SET_TIME_SIGNATURE",
               value: {
                 beat_units_per_measure,
-                beat_unit
-              }
+                beat_unit,
+              },
             });
           }}
         >
@@ -137,10 +141,10 @@ export default function App() {
         </select>
         <Wrapper
           className="MegaMenu"
-          onSelection={sample => {
+          onSelection={(sample) => {
             send({
               type: "ADD_TRACK",
-              value: { track_id: uuidv4(), sample }
+              value: { track_id: uuidv4(), sample },
             });
           }}
         >
@@ -151,13 +155,11 @@ export default function App() {
             <MegaMenu
               items={Object.entries(samples_by_kind).map(([kind, samples]) => ({
                 label: kind.toLowerCase(),
-                items: samples
-                  // @ts-ignore
-                  .map(sample => (
-                    <MenuItem key={sample.id} value={sample}>
-                      {basename(sample.path)}
-                    </MenuItem>
-                  ))
+                items: samples.map((sample) => (
+                  <MenuItem key={sample.id} value={sample}>
+                    {basename(sample.path)}
+                  </MenuItem>
+                )),
               }))}
             />
           </Menu>
@@ -173,10 +175,10 @@ export default function App() {
           <input
             type="checkbox"
             checked={edit_velocity_mode}
-            onChange={event => {
+            onChange={(event) => {
               send({
                 type: "SET_EDIT_VELOCITY_MODE",
-                value: event.target.checked
+                value: event.target.checked,
               });
             }}
           />
@@ -213,12 +215,12 @@ export default function App() {
           <input
             type="file"
             accept=".json"
-            onChange={event => {
+            onChange={(event) => {
               const file =
                 event.currentTarget.files && event.currentTarget.files[0];
               if (file != null) {
                 const reader = new FileReader();
-                reader.onload = event => {
+                reader.onload = (event) => {
                   try {
                     const project = JSON.parse(
                       // @ts-ignore
@@ -258,7 +260,7 @@ export default function App() {
       <main>
         <section className={styles.sequencer}>
           <section className={styles.sequencer_tcps}>
-            {tracks.map(track => (
+            {tracks.map((track) => (
               <label
                 key={track.id}
                 className={cx(
@@ -277,15 +279,15 @@ export default function App() {
                 <div className={styles.sequencer_tcp_name}>{track.name}</div>
                 <select
                   value={track.quantize}
-                  onChange={event => {
+                  onChange={(event) => {
                     const quantize = parseInt(event.target.value);
                     send({
                       type: "CHANGE_TRACK_QUANTIZE",
                       value: {
                         quantize,
                         quantize_prev: track.quantize,
-                        track_id: track.id
-                      }
+                        track_id: track.id,
+                      },
                     });
                   }}
                 >
@@ -299,7 +301,7 @@ export default function App() {
                   onClick={() => {
                     send({
                       type: "DUPLICATE_TRACK",
-                      value: { track_id: track.id, new_track_id: uuidv4() }
+                      value: { track_id: track.id, new_track_id: uuidv4() },
                     });
                   }}
                   className={styles.button}
@@ -348,7 +350,7 @@ export default function App() {
                 })}
               </section>
             )} */}
-            {tracks.map(track => {
+            {tracks.map((track) => {
               const ticks = ppqn / (track.quantize / 4);
               const steps_per_measure =
                 beat_units_per_measure * (track.quantize / beat_unit);
@@ -360,10 +362,10 @@ export default function App() {
               if (edit_velocity_mode === true) {
                 return (
                   <div key={track.id} className={styles.pads_row}>
-                    {range(0, num_steps).map(i => {
+                    {range(0, num_steps).map((i) => {
                       const start = i * ticks;
                       const note_index = notes.findIndex(
-                        x => x.track_id === track.id && x.start === start
+                        (x) => x.track_id === track.id && x.start === start
                       );
                       const has_note = note_index !== -1;
                       const velocity = has_note
@@ -382,15 +384,13 @@ export default function App() {
                                 (acc, i) => {
                                   // https://stackoverflow.com/a/23406564
                                   acc[
-                                    `:nth-of-type(${(track.quantize /
-                                      beat_unit) *
-                                      2}n+${i +
-                                      1 +
-                                      track.quantize / beat_unit})`
+                                    `:nth-of-type(${
+                                      (track.quantize / beat_unit) * 2
+                                    }n+${i + 1 + track.quantize / beat_unit})`
                                   ] = {
                                     backgroundColor: has_note
                                       ? "#ffe7f0"
-                                      : "#5b4a4b"
+                                      : "#5b4a4b",
                                   };
                                   return acc;
                                 },
@@ -413,14 +413,14 @@ export default function App() {
                             min={min_velocity}
                             max={max_velocity}
                             step={1}
-                            onChange={event => {
+                            onChange={(event) => {
                               send({
                                 type: "SET_NOTE_VELOCITY",
                                 value: {
                                   velocity: parseFloat(event.target.value),
                                   start,
-                                  track_id: track.id
-                                }
+                                  track_id: track.id,
+                                },
                               });
                             }}
                             className={cx(
@@ -438,9 +438,9 @@ export default function App() {
 
               return (
                 <div key={track.id} className={styles.pads_row}>
-                  {range(0, num_steps).map(i => {
+                  {range(0, num_steps).map((i) => {
                     const has_note = !!notes.find(
-                      x => x.track_id === track.id && x.start === i * ticks
+                      (x) => x.track_id === track.id && x.start === i * ticks
                     );
                     return (
                       <button
@@ -449,7 +449,7 @@ export default function App() {
                           const start = i * ticks;
                           send({
                             type: "PAD_PRESS",
-                            value: { start, track_id: track.id }
+                            value: { start, track_id: track.id },
                           });
                         }}
                         className={cx(
@@ -462,12 +462,13 @@ export default function App() {
                               (acc, i) => {
                                 // https://stackoverflow.com/a/23406564
                                 acc[
-                                  `:nth-of-type(${(track.quantize / beat_unit) *
-                                    2}n+${i + 1 + track.quantize / beat_unit})`
+                                  `:nth-of-type(${
+                                    (track.quantize / beat_unit) * 2
+                                  }n+${i + 1 + track.quantize / beat_unit})`
                                 ] = {
                                   backgroundColor: has_note
                                     ? "#ffe7f0"
-                                    : "#5b4a4b"
+                                    : "#5b4a4b",
                                 };
                                 return acc;
                               },
@@ -518,11 +519,11 @@ export default function App() {
                 <div className={styles.mcp_name}>{track.name}</div>
                 <section className={styles.mcp_buttons}>
                   <button
-                    onClick={event => {
+                    onClick={(event) => {
                       const mute = !track.mute;
                       send({
                         type: "SET_TRACK_MUTE",
-                        value: { mute, track_id: track.id }
+                        value: { mute, track_id: track.id },
                       });
                     }}
                     className={cx(
@@ -538,7 +539,7 @@ export default function App() {
                       const solo = !track.solo;
                       send({
                         type: "SET_TRACK_SOLO",
-                        value: { solo, track_id: track.id }
+                        value: { solo, track_id: track.id },
                       });
                     }}
                     className={cx(
@@ -556,10 +557,13 @@ export default function App() {
                     min={min_volume}
                     max={max_volume}
                     step={0.01}
-                    onChange={value => {
+                    onChange={(value) => {
                       send({
                         type: "SET_TRACK_VOLUME",
-                        value: { volume: parseFloat(value), track_id: track.id }
+                        value: {
+                          volume: parseFloat(value),
+                          track_id: track.id,
+                        },
                       });
                     }}
                   />
@@ -571,10 +575,10 @@ export default function App() {
                     min={min_pan}
                     max={max_pan}
                     step={0.01}
-                    onChange={value => {
+                    onChange={(value) => {
                       send({
                         type: "SET_TRACK_PAN",
-                        value: { pan: parseFloat(value), track_id: track.id }
+                        value: { pan: parseFloat(value), track_id: track.id },
                       });
                     }}
                   />
@@ -599,19 +603,19 @@ function Sampler(props) {
     max_pitch,
     samples,
     selected_track_id,
-    project: { tracks }
+    project: { tracks },
   } = currentState.context;
 
-  const track = tracks.find(x => x.id === selected_track_id);
+  const track = tracks.find((x) => x.id === selected_track_id);
 
   if (!track) {
     return null;
   }
 
   const sample_id = track.sample_id;
-  const samples_by_kind = groupBy(x => x.kind, samples);
+  const samples_by_kind = groupBy((x) => x.kind, samples);
   const ordered_samples = Object.values(samples_by_kind).flat();
-  const sample_index = ordered_samples.findIndex(x => x.id === sample_id);
+  const sample_index = ordered_samples.findIndex((x) => x.id === sample_id);
 
   return (
     <div className={styles.sampler}>
@@ -623,7 +627,7 @@ function Sampler(props) {
             const sample_id = ordered_samples[sample_index - 1].id;
             send({
               type: "SET_TRACK_SAMPLE",
-              value: { sample_id, track_id: track.id }
+              value: { sample_id, track_id: track.id },
             });
           }}
           className={styles.button}
@@ -632,23 +636,21 @@ function Sampler(props) {
         </button>
         <select
           value={track.sample_id}
-          onChange={event => {
+          onChange={(event) => {
             const sample_id = event.target.value;
             send({
               type: "SET_TRACK_SAMPLE",
-              value: { sample_id, track_id: track.id }
+              value: { sample_id, track_id: track.id },
             });
           }}
         >
           {Object.entries(samples_by_kind).map(([kind, samples]) => (
             <optgroup key={kind} label={kind}>
-              {samples
-                // @ts-ignore
-                .map(sample => (
-                  <option key={sample.id} value={sample.id}>
-                    {basename(sample.path)}
-                  </option>
-                ))}
+              {samples.map((sample) => (
+                <option key={sample.id} value={sample.id}>
+                  {basename(sample.path)}
+                </option>
+              ))}
             </optgroup>
           ))}
         </select>
@@ -659,7 +661,7 @@ function Sampler(props) {
             const sample_id = ordered_samples[sample_index + 1].id;
             send({
               type: "SET_TRACK_SAMPLE",
-              value: { sample_id, track_id: track.id }
+              value: { sample_id, track_id: track.id },
             });
           }}
           className={styles.button}
@@ -672,7 +674,7 @@ function Sampler(props) {
           onClick={() => {
             send({
               type: "PREVIEW_SAMPLE",
-              value: { sample_id, track_id: track.id }
+              value: { sample_id, track_id: track.id },
             });
           }}
           className={styles.sample_preview_pad}
@@ -683,10 +685,10 @@ function Sampler(props) {
             min={min_pitch}
             max={max_pitch}
             step={0.01}
-            onChange={value => {
+            onChange={(value) => {
               send({
                 type: "SET_TRACK_PITCH",
-                value: { pitch: parseFloat(value), track_id: track.id }
+                value: { pitch: parseFloat(value), track_id: track.id },
               });
             }}
           />
