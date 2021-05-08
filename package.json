@@ -12,7 +12,7 @@
     "classnames": "^2.2.6",
     "emotion": "^10.0.9",
     "jsmidgen": "^0.1.5",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.21",
     "precision-inputs": "^0.2.5",
     "react": "^16.8.5",
     "react-aria-menubutton": "^6.1.0",
